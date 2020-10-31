@@ -1,0 +1,46 @@
+---
+title: "STAT-5361 Homework#8"
+author: "Simiao Gao"
+output: pdf_document
+---
+
+## Exercises 5.3.3
+
+### (1)
+$$\mathrm dr(t) = [g(t)+h(t)r(t)] \mathrm dt + \sigma(t) \mathrm dW(t) \\
+\text{Hence, } g(t) =\alpha b, \, h(t) =-\alpha,\,\sigma(t)=\sigma \\$$
+$$\begin{aligned}
+
+\mathrm d(e^{\alpha t} r(t)) &= e^{\alpha t} \alpha b \,\mathrm dt + e^{\alpha t} \sigma \,\mathrm dW(t) \\
+e^{\alpha t} r(t) &= r(0) + \alpha b \int_0^t e^{\alpha s} \,\mathrm ds + \sigma \int_0^t e^{\alpha s} \,\mathrm d W(s) \;\cdots (1)\\
+e^{\alpha (t+\Delta)} r(t+\Delta) &= r(0) + \alpha b \int_0^{t+\Delta} e^{\alpha s} \,\mathrm ds + \sigma \int_0^{t+\Delta} e^{\alpha s} \,\mathrm d W(s) \;\cdots (2) 
+\end{aligned}$$
+
+$$(2) - (1) \, \implies r(t+\Delta) = e^{-\alpha \Delta} r(t) + b(1-e^{-\alpha}) + \sigma \int_t^{t+\Delta} e^{\alpha s} \,\mathrm d W(s)$$
+
+$$\begin{aligned}
+\sigma_r^2(t,t+\Delta) &= \int_t^{t+\Delta} e^{2\alpha (s-t-\Delta)} \,\mathrm ds       \\
+&=\frac{\sigma^2}{2\alpha} (1-e^{-2\alpha}) 
+\end{aligned}$$
+
+Therefore,
+$$r(t+\Delta) = e^{-\alpha \Delta} r(t) + b(1-e^{-\alpha}) + \frac{\sigma}{\sqrt{2\alpha}} \sqrt{1-e^{-2\alpha \Delta}}Z$$
+
+
+
+### (2)
+
+
+
+```{r message=FALSE, warning=FALSE, tidy=TRUE, tidy.opts=list(width.cutoff=50)}
+
+```
+
+### (3)
+
+
+
+```{r message=FALSE, warning=FALSE}
+
+```
+
